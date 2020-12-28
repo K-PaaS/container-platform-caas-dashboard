@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- TEMPLATES -->
+    <definition name="layout.default" template="/WEB-INF/views/common/defaultLayout.jsp">
+        <put-attribute name="title" value="Container Service"/>
+        <put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+        <put-attribute name="left-menu" value="/WEB-INF/views/common/leftMenu.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
+        <put-attribute name="modal" value="/WEB-INF/views/common/modal.jsp"/>
+        <put-attribute name="alert" value="/WEB-INF/views/common/alert.jsp"/>
+        <put-attribute name="loadingSpinner" value="/WEB-INF/views/common/loadingSpinner.jsp"/>
+    </definition>
+
+    <definition name="layout.admin" template="/WEB-INF/views/common/defaultLayout.jsp">
+        <put-attribute name="title" value="Container Service"/>
+        <put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+        <put-attribute name="left-menu" value="/WEB-INF/views/common/adminLeftMenu.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
+        <put-attribute name="modal" value="/WEB-INF/views/common/modal.jsp"/>
+        <put-attribute name="alert" value="/WEB-INF/views/common/alert.jsp"/>
+        <put-attribute name="loadingSpinner" value="/WEB-INF/views/common/loadingSpinner.jsp"/>
+    </definition>
+
+    <!-- PAGES -->
+    <definition name="index" extends="layout.default">
+        <put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
+    </definition>
+
+    <definition name="/*/*" extends="layout.default">
+        <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp"/>
+    </definition>
+
+    <definition name="/admin/*/*" extends="layout.admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}.jsp"/>
+    </definition>
+
+    <!-- Service 메뉴 이외 3 depth menu -->
+    <definition name="/*/*/*" extends="layout.default">
+        <put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp"/>
+    </definition>
+
+    <definition name="layout.empty" template="/WEB-INF/views/common/emptyLayout.jsp">
+        <put-attribute name="body" value=""/>
+    </definition>
+
+    <definition name="/common/unauthorized" extends="layout.empty">
+        <put-attribute name="body" value="/WEB-INF/views/common/unauthorized.jsp"/>
+    </definition>
+
+</tiles-definitions>
