@@ -51,7 +51,7 @@
             <div class="panel" style="">
                 <div class="panel-heading" style="">
                     <div>
-                        <img  class="panel-image" src="<c:url value="/resources/images/main/logo.png"/>" style="width: 60px; height: 48px;">
+                        <img  class="panel-image" src="/resources/images/main/logo.png" style="width: 60px; height: 48px;">
                         <span class="header-title" style=""> Container Service </span>
                     </div>
                 </div>

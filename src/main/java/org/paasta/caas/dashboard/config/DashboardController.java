@@ -4,6 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 /**
  * Dashboard Controller 클래스.
  *
@@ -25,4 +29,17 @@ public class DashboardController {
         model.setViewName("/common/unauthorized");
         return model;
     }
+
+    @RequestMapping(value = "/favicon.ico")
+    public void favicon(HttpServletRequest request, HttpServletResponse response ) {
+
+        try {
+            response.sendRedirect("/resources/images/favicon.ico");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 }

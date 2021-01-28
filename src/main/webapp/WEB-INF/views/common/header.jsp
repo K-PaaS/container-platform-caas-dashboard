@@ -11,7 +11,7 @@
 <%@ taglib prefix="cfn" uri="common/customTag.tld" %>
 <header class="header">
     <div class="logo">
-        <a href="javascript:void(0);" onclick="procMovePage('<%= Constants.CAAS_INIT_URI %>');" class="custom_border_none"><h1><img src="<c:url value="/resources/images/main/logo.png"/>" alt=""/></h1></a>
+        <a href="javascript:void(0);" onclick="procMovePage('<%= Constants.CAAS_INIT_URI %>');" class="custom_border_none"><h1><img src="/resources/images/main/logo.png" alt=""/></h1></a>
     </div>
     <div class="gnb search">
     </div>
