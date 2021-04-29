@@ -17,6 +17,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -55,6 +56,20 @@ public class CustomInterceptor extends HandlerInterceptorAdapter {
 
         LOGGER.info("### Interceptor start ###");
         LOGGER.info("** Request URI - "+url);
+
+        if("/error".equals(request.getRequestURI())){
+            return true;
+        }
+
+        HttpSession session = request.getSession();
+        if (commonService.duplicateCheck(session)) {
+            LOGGER.info("** <>Request URI - "+url);
+            // Session
+            request.getSession().invalidate(); // Login Page
+            response.sendRedirect("/error");
+            //response.sendRedirect(request.getContextPath()+"/common/error/unauthorized");
+            return false;
+        }
 
         try {
             if (!url.contains("/common/error/unauthorized") && !url.contains("/resources")) {

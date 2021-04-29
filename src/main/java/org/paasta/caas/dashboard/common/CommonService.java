@@ -1,11 +1,14 @@
 package org.paasta.caas.dashboard.common;
 
+import org.paasta.caas.dashboard.config.SessionAttributeListener;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Common Service 클래스
@@ -109,6 +112,21 @@ public class CommonService {
         ParametersList(String actualValue) {
             this.actualValue = actualValue;
         }
+    }
+
+    public boolean duplicateCheck(HttpSession session) {
+
+        boolean bflag=false;
+
+        ConcurrentHashMap<HttpSession, String> sessionMap = SessionAttributeListener.sessionMap;
+        //LOGGER.info("sessionMap::::::::::",sessionMap.toString());
+
+        if (sessionMap.get(session)==null) {
+            bflag = true;
+        }
+
+        //LOGGER.info("duplicateCheck={}",bflag);
+        return bflag;
     }
 
 }
