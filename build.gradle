@@ -4,7 +4,7 @@ buildscript {
 	}
 	dependencies {
 		classpath 'io.spring.gradle:dependency-management-plugin:1.0.0.RELEASE'
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.4.RELEASE")
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.3.10.RELEASE")
 	}
 }
 
@@ -31,6 +31,8 @@ ext {
 	jacocoVersion = '0.8.1'
 
 }
+
+ext['tomcat.version'] = '9.0.45'
 
 dependencyManagement {
 	imports {
