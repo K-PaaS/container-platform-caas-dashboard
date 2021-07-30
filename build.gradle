@@ -1,10 +1,13 @@
 buildscript {
+	ext {
+		springBootVersion = '2.3.10.RELEASE'
+	}
 	repositories {
 		jcenter()
 	}
 	dependencies {
 		classpath 'io.spring.gradle:dependency-management-plugin:1.0.0.RELEASE'
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.3.10.RELEASE")
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
 
@@ -21,23 +24,14 @@ repositories {
 
 ext {
 	appGroup = 'org.paasta.caas.dashboard'
-	springIoPlatformVersion = 'Cairo-SR3'
 	springSecurityTagLibsVersion = '5.0.7.RELEASE'
-	tomcatEmbedJasperVersion = '8.5.32'
+	tomcatEmbedJasperVersion = '9.0.45'
 	jstlVersion = '1.2'
 	gsonVersion = '2.8.5'
 	apacheTilesJspVersion = '3.0.8'
 	lombokVersion = '1.18.2'
 	jacocoVersion = '0.8.1'
 
-}
-
-ext['tomcat.version'] = '9.0.45'
-
-dependencyManagement {
-	imports {
-		mavenBom "io.spring.platform:platform-bom:${springIoPlatformVersion}"
-	}
 }
 
 sourceCompatibility = 1.8

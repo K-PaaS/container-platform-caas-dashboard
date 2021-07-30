@@ -220,14 +220,15 @@ public class SsoSecurityConfiguration {
         String serverDomain = request.getRequestURL().toString();
         try {
             HttpSession session =  request.getSession();
-            String forward = session.getAttribute("x-forwarded-proto").toString();
+            //String forward = session.getAttribute("x-forwarded-proto").toString();
+            String forward = "http";
             LOGGER.info("Forward ::::::::: " + forward);
             if (forward != null) {
                 serverDomain = serverDomain.replace("http", "").replace("https", "");
                 serverDomain = forward + serverDomain;
             }
         }catch (Exception e){
-
+            LOGGER.error("serverDomain Error = " + e);
         }
         String uri = request.getRequestURI();
         StringBuffer addParam = new StringBuffer();

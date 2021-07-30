@@ -58,6 +58,7 @@ public class CustomInterceptor extends HandlerInterceptorAdapter {
         LOGGER.info("** Request URI - "+url);
 
         if("/error".equals(request.getRequestURI())){
+            LOGGER.info("error page<>");
             return true;
         }
 
