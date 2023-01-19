@@ -25,7 +25,7 @@ repositories {
 ext {
 	appGroup = 'org.paasta.caas.dashboard'
 	springSecurityTagLibsVersion = '5.0.7.RELEASE'
-	tomcatEmbedJasperVersion = '9.0.45'
+	tomcatEmbedJasperVersion = '9.0.69'
 	jstlVersion = '1.2'
 	gsonVersion = '2.8.5'
 	apacheTilesJspVersion = '3.0.8'
@@ -33,6 +33,8 @@ ext {
 	jacocoVersion = '0.8.1'
 
 }
+
+ext['tomcat.version'] = '9.0.69'
 
 sourceCompatibility = 1.8
 group = "${appGroup}"
