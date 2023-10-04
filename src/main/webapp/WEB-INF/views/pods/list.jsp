@@ -5,7 +5,7 @@
   @since 2018.09.10
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="org.paasta.caas.dashboard.common.Constants" %>
+<%@ page import="org.caas.dashboard.common.Constants" %>
 <div class="sortable_wrap">
     <div class="sortable_top">
         <p>Pods</p>

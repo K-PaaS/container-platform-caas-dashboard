@@ -6,7 +6,7 @@
   since: 2018.08.07
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<div class="footer">Copyright © 2018 PaaS-TA. All rights reserved</div>
+<div class="footer">Copyright © 2018 K-PaaS. All rights reserved</div>
 
 <script type="text/javascript">
     // SET EVENT FOR ESCAPE KEY

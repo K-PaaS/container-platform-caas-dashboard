@@ -5,7 +5,7 @@
   @since 2018.08.14
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="org.paasta.caas.dashboard.common.Constants" %>
+<%@ page import="org.caas.dashboard.common.Constants" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:include page="../common/commonEvents.jsp"/>

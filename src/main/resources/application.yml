@@ -14,9 +14,9 @@ spring:
 
 ##INFRA_ADMIN Settings
 project:
-  name: paasta-caas-dashboard
-  artifactId: paasta-caas-dashboard
-  description: paasta-caas-dashboard
+  name: caas-dashboard
+  artifactId: caas-dashboard
+  description: caas-dashboard
 info:
   app:
     encoding: Encoding - UTF-8

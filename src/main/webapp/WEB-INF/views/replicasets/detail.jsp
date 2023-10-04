@@ -1,4 +1,4 @@
-<%@ page import="org.paasta.caas.dashboard.common.Constants" %>
+<%@ page import="org.caas.dashboard.common.Constants" %>
 <%--
   ReplicaSet detail
   @author CISS

@@ -20,7 +20,7 @@ repositories {
 }
 
 ext {
-	appGroup = 'org.paasta.caas.dashboard'
+	appGroup = 'org.caas.dashboard'
 	springIoPlatformVersion = 'Cairo-SR3'
 	springSecurityTagLibsVersion = '5.0.7.RELEASE'
 	tomcatEmbedJasperVersion = '8.5.32'
@@ -42,7 +42,7 @@ sourceCompatibility = 1.8
 group = "${appGroup}"
 
 war {
-	archivesBaseName = 'paas-ta-caas-dashboard'
+	archivesBaseName = 'caas-dashboard'
 }
 
 dependencies {

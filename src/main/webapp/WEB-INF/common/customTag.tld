@@ -17,7 +17,7 @@
         <!-- 함수 이름 이 이름으로 호출하게 됨 -->
         <name>camelCaseParser</name>
         <!-- java 파일이 있는 경로 -->
-        <function-class>org.paasta.caas.dashboard.common.CustomTag</function-class>
+        <function-class>org.caas.dashboard.common.CustomTag</function-class>
         <!-- 함수 리턴값 / 함수명 / 파라미터  -->
         <function-signature>java.lang.String camelCaseParser(java.lang.String)</function-signature>
         <example>

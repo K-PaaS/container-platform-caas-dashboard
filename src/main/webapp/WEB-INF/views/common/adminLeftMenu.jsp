@@ -6,7 +6,7 @@
   since: 2018.08.23
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="org.paasta.caas.dashboard.common.Constants" %>
+<%@ page import="org.caas.dashboard.common.Constants" %>
 <nav style="height: 90%;">
     <div class="scroll_style">
         <ul class="nav_1d caas_nav">
